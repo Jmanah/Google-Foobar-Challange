@@ -25,3 +25,30 @@ def solution(m):
                                                                                               # https://en.wikipedia.org/wiki/Absorbing_Markov_chain
 
     return formated([Fraction(i).limit_denominator() for i in F[0]])                          # Fundemental-Matrix probabilitie-fractions
+
+assert(solution(
+    [
+        [0],
+    ]
+)) == [1, 1]
+
+assert(solution(
+    [
+        [0, 2, 1, 0, 0],
+        [0, 0, 0, 3, 4],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+    ]
+)) == [7, 6, 8, 21]
+
+assert(solution(
+    [
+        [0, 1, 0, 0, 0, 1],
+        [4, 0, 0, 3, 2, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+    ]
+)) == [0, 3, 2, 9, 14]
