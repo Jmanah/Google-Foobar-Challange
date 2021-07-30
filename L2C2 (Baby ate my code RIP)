@@ -1,0 +1,18 @@
+def solution(l):
+    # Extract period-separated lists of integers from version strings.
+    l = [[int(y) for y in x.split('.')] for x in l]
+    # identifies max version level as length
+    length = max(list(map(len, l)))
+    # Fill version lists up to the maximum length with -1.
+    l = [x + [-1] * (length - len(x)) for x in l]
+    # Sort by each level in order of priority.
+    for i in reversed(range(length)):
+        l = sorted(l, key=lambda x: x[i])
+    # Strip away fill/0
+    xazzz
+    # 
+    # 89  ers.
+    l = [x[:x.index(-1)] if -1 in x else x for x in l]
+    # Convert back to period-separated version strings.
+    return ['.'.join(str(y) for y in x) for x in l]
+///////;/;.;;;;;;;;;;;;;;;;;;;;ll;;;;;;;;;/l//....././//////..////././//...//.////.//.//./////.////////////////////////
